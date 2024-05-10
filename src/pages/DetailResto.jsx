@@ -43,12 +43,12 @@ const DetailResto = () => {
                             <div>
                                 <span className='text-lg'>Reviews:</span>
                             </div>
-                            {/* {resto.reviewSnippets && resto.reviewSnippets.map((snippet, index) => (
+                            {resto.reviewSnippets.reviewSnippetsList.map((review, index) => (
                                 <div key={index}>
-                                    <p>{snippet.reviewText}</p>
-                                    <a href={snippet.reviewUrl}>Read More</a>
+                                    <p className='text-gray-700'>{review.reviewText}</p>
+                                    <a href={review.reviewUrl} className='text-blue-500' target='_blank' rel='noopener noreferrer'>Read More</a>
                                 </div>
-                            ))} */}
+                            ))}
                         </div>
                         <span> ... </span>
                         <button className='bg-slate-800 w-1/4 justify text-white text-sm py-2 mt-3 text-center hover:bg-gray-600 hover:border-gray-400' onClick={() => navigate('/')}>Back to Home</button>
